@@ -1,0 +1,20 @@
+@mixin category-color($color){
+    background-color: $color;
+    box-shadow: 0px 4px 8px 0px rgba($color, .5);
+}
+
+@mixin border(){
+    border: 1px solid rgba($color-black, .1);
+}
+
+@mixin font-lg(){
+    font-size: 1.7rem;
+}
+
+@mixin font-base(){
+    font-size: 1.5rem;
+}
+
+@mixin font-xs(){
+    font-size: 1.4rem;
+}

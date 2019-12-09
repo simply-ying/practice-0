@@ -1,0 +1,136 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    
+    .user{
+        &__info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: $gap-xs;
+
+            img{
+                border-radius: $radius;
+                box-shadow: 0px 6px 8px 0px rgba($color-gray-shade-4, .4) inset;
+                width: 6rem; height: auto;
+            }
+
+            &--balance { margin: 0 1.5rem; }
+
+            &--wrapper{ display: flex; align-items: center; }
+            i{
+                @include border();
+                border-radius: $radius;
+                padding: .5rem;
+            }
+        }
+
+        &__progress{
+            background-color: $color-gray-shade-3;
+            border-radius: $radius;
+            height: 5px;
+            width: 100%;
+            position: relative;
+
+            .completed{
+                background-color: $color-green;
+                border-radius: $radius;
+                position: absolute;
+                top: 0; left: 0;
+                height: 100%;
+                z-index: 2;
+            }
+        }
+
+        &__balance {
+            display: flex;
+            flex-direction: column;
+            margin: 1.5rem 0 1rem 0;
+            li{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: .5rem;
+                width: 100%;
+            }
+        }
+
+        &__reminder{
+            @include border();
+            @include font-xs();
+
+            border-radius: $radius;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: $gap-xs;
+            i{ opacity: .5; margin-left: 1rem; }
+        }
+    }
+
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 0;
+        max-width: 28rem;
+
+        .category{
+            cursor: pointer;
+            margin: 1rem .75rem;
+            text-align: center;
+
+            &:hover{
+                .category__icon{ transform: translateY(-.25rem); }
+            }
+
+            &__icon{
+                border-radius: $radius;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.3rem;
+                width: 5rem;
+                height: 5rem;
+                margin-bottom: .5rem;
+                transition: all .5s;
+
+                &--mobile{ @include category-color($color-blue); }
+                &--charity{ @include category-color($color-red); }
+                &--car{ @include category-color($color-black); }
+                &--game{ @include category-color($color-orange); }
+                &--deposit{ @include category-color($color-cyan); }
+                &--fines{ @include category-color($color-purple); }
+                &--utilities{ @include category-color($color-green); }
+                &--add{ @include border(); color: $color-gray-shade-4 }
+            }
+
+            small{ @include font-xs(); }
+        }
+    }
+
+    .shortcut{
+        background-color: white;
+        border-radius: $radius;
+        box-shadow: 0px 5px 15px 0px rgba($color-black, 0.1);
+        padding: .8rem;
+
+        &__item{
+            border-radius: $radius-xs;
+            color: $color-gray-shade-4;
+            font-size: 2rem;
+            padding: .8rem 0;
+            margin: 0 .1rem;
+            text-align: center;
+            transition: all .5s;
+
+            &:hover, &.active{
+                background-color: $color-gray-shade-2;
+                color: rgba(darken($color-red, 30%), .5);
+            }
+        }
+        &__link{ padding: .5rem .8rem; }
+    }
+}

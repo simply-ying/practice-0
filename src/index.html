@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tablet Banking App</title>
+    <link rel="stylesheet" href="./app.css">
+    <script src="./app.js"></script>
+</head>
+<body>
+    <main>
+        <!-- HOME BEGINS -->
+        <section class="home">
+            <!-- USER BEGINS -->
+            <section class="user">
+
+                <div class="user__info">
+                    <div class="user__info--wrapper">
+                        <img src="./images/user.jpg" alt="Profile Photo">
+                        <div class="user__info--balance">
+                            <p>Balance:</p>
+                            <h3>$596.00</h3>
+                        </div>
+                    </div>
+                    <i class="icon-chart-bar"></i>
+                </div>
+
+                <div class="user__progress"><span class="completed" style="width: 40.4%"></span></div>
+
+                <ul class="user__balance">
+                    <li><span>Credit limit:</span><span class="font-medium">$1,000</span></li>
+                    <li><span>Used:</span><span class="font-medium">$404</span></li>
+                </ul>
+                <div class="user__reminder">
+                    <p>Min. credit payment in July: <span class="font-medium">$119</span></p>
+                    <i class="icon-help-circled-alt"></i>
+                </div>
+            </section>
+            <!-- USER ENDS -->
+
+            <!-- CATEGORIES BEGINS -->
+            <div class="categories">
+                <div class="category">
+                    <div class="category__icon category__icon--mobile">
+                        <i class="icon-mobile"></i>
+                    </div>
+                    <small>Mobile</small>
+                </div>
+                <div class="category">
+                    <div class="category__icon category__icon--charity"><i class="icon-heart-empty"></i></div>
+                    <small>Charity</small>
+                </div>
+                <div class="category">
+                    <div class="category__icon category__icon--car"><i class="icon-taxi"></i></div>
+                    <small>Car</small>
+                </div>
+                <div class="category">
+                    <div class="category__icon category__icon--game"><i class="icon-gamepad"></i></div>
+                    <small>Games</small>
+                </div>
+                <div class="category">
+                    <div class="category__icon category__icon--deposit"><i class="icon-percent"></i></div>
+                    <small>Deposits</small>
+                </div>
+                <div class="category">
+                    <div class="category__icon category__icon--fines"><i class="icon-police"></i></div>
+                    <small>Fines</small>
+                </div>
+                <div class="category">
+                    <div class="category__icon category__icon--utilities">
+                        <i class="icon-home"></i>
+                    </div>
+                    <small>Utilities</small>
+                </div>
+                <div class="category">
+                    <div class="category__icon category__icon--add">
+                        <i class="icon-plus"></i>
+                    </div>
+                    <small>Add</small>
+                </div>
+            </div>
+            <!-- CATEGORIES ENDS -->
+
+            <!-- SHORTCUT BEGINS -->
+            <ul class="shortcut is-flex">
+                <li class="shortcut__item active"><a class="shortcut__link link-nodeco" href="#">
+                    <i class="icon-home-outline"></i>
+                </a></li>
+                <li class="shortcut__item"><a class="shortcut__link link-nodeco" href="#">
+                    <i class="icon-credit-card"></i>
+                </a></li>
+                <li class="shortcut__item"><a class="shortcut__link link-nodeco" href="#">
+                    <i class="icon-exchange"></i>
+                </a></li>
+                <li class="shortcut__item"><a class="shortcut__link link-nodeco" href="#">
+                    <i class="icon-sliders"></i>
+                </a></li>
+                <li class="shortcut__item"><a class="shortcut__link link-nodeco" href="#">
+                    <i class="icon-comment"></i>
+                </a></li>
+            </ul>
+            <!-- SHORTCUT ENDS -->
+        </section>
+        <!-- HOME ENDS -->
+
+        <!-- CARDMENU BEGINS -->
+        <section class="cardmenu">
+            <div class="swiper-container--cardmenu">
+                <div class="swiper-wrapper">
+                    <!-- CARD BEGINS -->
+                    <div class="card swiper-slide">
+                        <div class="card__header">
+                            <img src="./images/card-blue@sm.png" alt="Card">
+                            <div class="card-progress"><span class="completed" style="width: 78%;"></span></div>
+                            <p>
+                                <span>Internal payments limit:</span>
+                                <span class="font-medium">$156 / $200</span>
+                            </p>
+                        </div>
+                        <div class="card__body">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="history">
+                                        <div class="history__header">
+                                            <h3>Transaction history</h3>
+                                            <a href="" class="link-nodeco">View Report</a>
+                                        </div>
+                                        <!-- MONTH BEGINS -->
+                                        <div class="history__month">
+                                            <h4>28 Nov, 2019</h4>
+                                            <!-- RECORD BEGINS -->
+                                            <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon">
+                                                        <i class="icon-gamepad"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">Fortnite, Epic Games</span>
+                                                        <small>Online Games</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">19:00</div>
+                                                    <div class="record__amount font-medium">-$29.99</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                            <!-- RECORD BEGINS -->
+                                            <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon">
+                                                        <i class="icon-coffee"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">Starbucks</span>
+                                                        <small>Cafe & Restaurants</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">15:21</div>
+                                                    <div class="record__amount font-medium">-$4.00</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                            <!-- RECORD BEGINS -->
+                                            <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon">
+                                                        <i class="icon-taxi"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">Uber</span>
+                                                        <small>Transport</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">9:48</div>
+                                                    <div class="record__amount font-medium">-$12.45</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                             <!-- RECORD BEGINS -->
+                                             <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon bg-green">
+                                                        <i class="icon-down"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">From: Leonid Stern</span>
+                                                        <small>Personal Transaction</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">8:19</div>
+                                                    <div class="record__amount font-medium text-green">+$140</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                        </div>
+                                        <!-- MONTH ENDS -->
+                                        <!-- MONTH BEGINS -->
+                                        <div class="history__month">
+                                            <h4>27 Nov, 2019</h4>
+                                            <!-- RECORD BEGINS -->
+                                            <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon">
+                                                        <i class="icon-gamepad"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">Fortnite, Epic Games</span>
+                                                        <small>Online Games</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">19:00</div>
+                                                    <div class="record__amount font-medium">-$29.99</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                            <!-- RECORD BEGINS -->
+                                            <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon">
+                                                        <i class="icon-coffee"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">Starbucks</span>
+                                                        <small>Cafe & Restaurants</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">15:21</div>
+                                                    <div class="record__amount font-medium">-$4.00</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                            <!-- RECORD BEGINS -->
+                                            <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon">
+                                                        <i class="icon-taxi"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">Uber</span>
+                                                        <small>Transport</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">9:48</div>
+                                                    <div class="record__amount font-medium">-$12.45</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                             <!-- RECORD BEGINS -->
+                                             <div class="record">
+                                                <div class="record__column">
+                                                    <div class="record__icon bg-green">
+                                                        <i class="icon-down"></i>
+                                                    </div>
+                                                    <div class="record__description">
+                                                        <span class="font-medium">From: Leonid Stern</span>
+                                                        <small>Personal Transaction</small>
+                                                    </div>
+                                                </div>
+                                                <div class="record__column">
+                                                    <div class="record__time">8:19</div>
+                                                    <div class="record__amount font-medium text-green">+$140</div>
+                                                </div>
+                                            </div>
+                                            <!-- RECORD ENDS -->
+                                        </div>
+                                        <!-- MONTH ENDS -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <!-- CARD ENDS -->
+
+                    <!-- CARD BEGINS -->
+                    <div class="card swiper-slide">
+                        <div class="card__header">
+                            <img src="./images/card-black@sm.png" alt="Card">
+                            <div class="card-progress"><span class="completed" style="width: 58.25%;"></span></div>
+                            <p>
+                                <span>Internal payments limit:</span>
+                                <span class="font-medium">$233 / $400</span>
+                            </p>
+                        </div>
+                        <div class="card__body">
+                        </div>
+                    </div>
+                    <!-- CARD ENDS -->
+                </div>
+            </div>
+        </section>
+        <!-- CARDMENU ENDS -->
+    </main>
+</body>
+</html>

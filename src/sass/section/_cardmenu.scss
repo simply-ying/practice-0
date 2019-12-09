@@ -1,0 +1,131 @@
+.cardmenu{
+    background-color: $color-gray-shade-2;
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+.card{
+    background-color: $color-gray-shade-2;
+    display: grid;
+    grid-template-rows: 28rem 1fr;
+    position: relative;
+
+    &__header{
+        margin: $gap-sm auto;
+        max-width: 28rem;
+        position: relative;
+
+        img{
+            border-radius: $radius-card;
+            box-shadow: 0px 5px 15px 0px rgba($color-black, 0.5);
+            width: 100%;
+            height: auto;
+
+        }
+
+        .card-progress{
+            background-color: darken($color-gray-shade-3, 5%);
+            border-radius: $radius;
+            height: 5px;
+            width: 98%;
+            margin: 1.5rem auto 1rem auto;
+            position: relative;
+            .completed{
+                background-color: $color-green;
+                border-radius: $radius;
+                position: absolute;
+                top: 0; left: 0;
+                height: 100%;
+                z-index: 2;
+            }
+        }
+
+        p{ display: flex; justify-content: space-between; }
+    }
+
+    &__body{
+        height: calc(100vh - 28rem - 6rem - 6rem);
+        overflow: hidden;
+        padding: $gap-xs;
+    }
+
+    &::after{
+        content: "";
+        background-color: inherit;
+        filter: blur(5px);
+        height: 2rem;
+        width: 90%;
+        position: absolute;
+        bottom: 1.2rem; left: 1rem;
+        z-index: 3;
+    }
+}
+
+.history{
+    // padding: 0 2rem;
+    margin: 0 auto;
+    max-width: 36rem;
+    &__header{
+        color: $color-black;
+        display: flex;
+        justify-content: space-between;
+        a{
+            @include border();
+            border-radius: $radius;
+            padding: .75rem 1.5rem;
+        }
+    }
+
+    &__month{
+        margin-bottom: 2rem;
+        h4{ margin-bottom: 1rem; }
+    }
+}
+
+.record{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    &__column{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    &__icon{
+        @include border();
+        border-radius: $radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.5rem;
+        height: 3.5rem;
+
+        i{
+            font-size: 1.6rem;
+            opacity: .5;
+        }
+    }
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        margin: 0 .8rem;
+
+        span{ margin-bottom: .2rem; }
+    }
+
+    &__time{ width: 3rem; }
+
+    &__amount{ margin-left: 1rem; width: 6rem; }
+
+    &__description, &__time{ @include font-xs(); }
+
+    &__time, &__amount{ text-align: right; }
+}
+
+.swiper-container--cardmenu{
+    height: 100%;
+    .swiper-wrapper{ height: 100%; }
+}
