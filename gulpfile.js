@@ -40,3 +40,29 @@ gulp.task('serve', function() {
                 "src/app.js",
                 "src/index.html"]).on('change', browserSync.reload);
 });
+
+gulp.task('production', function(){
+    return gulp.src(['./src/index.html',
+                     './src/app.css',
+                     './src/app.js',
+                     './src/font/*',
+                     './src/images/*'],
+                     { base: './src/' }
+                    )
+                .pipe(minifier({
+                    minify: true,
+                    minifyHTML: {
+                      collapseWhitespace: true,
+                      conservativeCollapse: true,
+                    },
+                    minifyJS: {
+                      sourceMap: true,
+                    },
+                    minifyCSS: true,
+                    getKeptComment: function (content, filePath) {
+                        var m = content.match(/\/\*![\s\S]*?\*\//img);
+                        return m && m.join('\n') + '\n' || '';
+                    }
+                }))
+                .pipe(gulp.dest('./dist/'));
+});
